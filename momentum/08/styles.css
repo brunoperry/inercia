@@ -43,31 +43,20 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden
-}
-
-body {
-    position: fixed;
-    display: block;
-    inset: 0;
-
-    /* width: 100%; */
-    height: 100%;
-    overflow-y: scroll;
-}
-
-.background {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    height: 100%;
+    overflow: hidden;
     background-image: url("background.jpeg");
     background-position: center;
     background-size: cover;
 }
 
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
 main {
-    position: absolute;
     display: block;
     padding: var(--padding);
     height: max-content;
