@@ -12,6 +12,7 @@
     --h2-size: 52px;
     --h3-size: 32px;
     --li-size: 32px;
+    --li-span-size: 30px;
 
     --line-height: 45px;
     --line-height2: 60px;
@@ -95,6 +96,7 @@ li {
 
 span {
     color: red;
+    font-size: var(--li-span-size);
 }
 
 a {
@@ -143,7 +145,8 @@ footer a {
 
         --h2-size: 32px;
         --h3-size: 22px;
-        --li-size: 16px;
+        --li-size: 17px;
+        --li-span-size: 15px;
         --line-height: 30px;
         --line-height2: 40px;
         --font-weight: 100;
