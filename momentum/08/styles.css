@@ -40,15 +40,18 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
-    background-color: var(--color-b);
+    overflow-y: hidden;
+}
+
+html {
+    background-image: url("background.jpeg");
+    background-position: 45% center;
+    background-size: cover;
 }
 
 body {
     display: block;
-    background-image: url("background.jpeg");
-    background-position: 45% center;
-    background-size: cover;
+    overflow-y: scroll;
 }
 
 main {
