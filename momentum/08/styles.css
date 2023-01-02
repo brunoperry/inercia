@@ -56,7 +56,18 @@ body {
     overflow-y: scroll;
 }
 
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    height: 100%;
+    background-image: url("background.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
 main {
+    position: absolute;
     display: block;
     padding: var(--padding);
     height: max-content;
@@ -135,16 +146,6 @@ footer a {
     background-repeat: no-repeat;
     background-position: center;
     line-height: var(--footer-height)
-}
-
-.background {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    height: 100%;
-    background-image: url("background.jpeg");
-    background-position: center;
-    background-size: cover;
 }
 
 @media (max-width: 600px) {
