@@ -1,6 +1,6 @@
 :root {
     --color-a: #f5f5f5;
-    --color-b: #000000;
+    --color-b: #2d2d2d;
 
     --red: #ff0000;
     --blue: #0073ff;
@@ -46,36 +46,51 @@ html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url("background.jpeg");
-    background-position: center;
-    background-size: cover;
+    background-color: var(--color-b);
 }
 
 body {
     display: block;
-    width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    margin: 0 auto;
+    background-image: url("./background.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 main {
+    position: fixed;
+    height: 100%;
+    width: 100%;
     display: block;
-    padding: var(--padding);
-    height: max-content;
-    max-width: var(--max_width);
-    margin: 0 auto;
-    background-color: var(--color-overlay);
+    overflow-y: scroll;
 }
 
 header {
-    margin-bottom: var(--section-margin);
+    max-width: var(--max_width);
+    padding: var(--padding);
+    padding-bottom: var(--section-margin);
+    background-color: var(--color-overlay);
+    margin: 0 auto;
     /* margin-bottom: calc(var(--padding)/2); */
 }
 
 section {
-    display: inline-block;
-    width: 100%;
-    margin: var(--section-margin) 0;
+    /* width: 100%; */
+    max-width: var(--max_width);
+    padding: var(--section-margin) var(--padding);
+    background-color: var(--color-overlay);
+    margin: 0 auto;
+}
+
+footer {
+    max-width: var(--max_width);
+    display: flex;
+    min-height: var(--footer-height);
+    padding: var(--padding);
+    padding-top: var(--section-margin);
+    background-color: var(--color-overlay);
+    margin: 0 auto;
 }
 
 h2,
@@ -135,12 +150,6 @@ a:hover svg {
     scale: 1.2;
 }
 
-footer {
-    display: flex;
-    min-height: var(--footer-height);
-    margin-top: var(--section-margin);
-}
-
 footer a {
     width: 100%;
     height: 100%;
@@ -149,7 +158,7 @@ footer a {
     background-image: url("inercia_logo_white.svg");
     background-repeat: no-repeat;
     background-position: center;
-    line-height: var(--footer-height)
+    line-height: var(--footer-height);
 }
 
 @media (max-width: 600px) {
