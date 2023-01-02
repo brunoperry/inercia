@@ -141,6 +141,7 @@ footer a {
     position: fixed;
     inset: 0;
     z-index: -1;
+    height: 100%;
     background-image: url("background.jpeg");
     background-position: center;
     background-size: cover;
