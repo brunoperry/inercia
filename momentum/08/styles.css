@@ -3,6 +3,7 @@
     --color-b: #000000;
 
     --red: #ff0000;
+    --blue: #0073ff;
     --color-overlay: #0000009e;
 
     --padding: 40px;
@@ -14,14 +15,15 @@
 
     --h2-size: 52px;
     --h3-size: 32px;
-    --li-size: 32px;
-    --li-span-size: 30px;
+    --li-size: 28px;
+    --li-span-size: 26px;
 
     --line-height: 45px;
     --line-height2: 60px;
     --font-weight: bolder;
 
-    --link-size: 32px;
+    --link-size: 20px;
+    --speed: 0.2s;
 }
 
 @font-face {
@@ -63,6 +65,11 @@ main {
     max-width: var(--max_width);
     margin: 0 auto;
     background-color: var(--color-overlay);
+}
+
+header {
+    margin-bottom: var(--section-margin);
+    /* margin-bottom: calc(var(--padding)/2); */
 }
 
 section {
@@ -112,12 +119,20 @@ a {
 }
 
 a svg {
+    fill: var(--blue);
     width: var(--link-size);
     height: var(--link-size);
+    transform-origin: bottom left;
+    transition: scale var(--speed) ease-in-out;
+    scale: 1;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+a:hover svg {
+    scale: 1.2;
 }
 
 footer {
