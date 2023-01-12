@@ -1,0 +1,37 @@
+<section id="hero">
+  <button class="hero-add-button" aria-label="Add news">
+    <svg width="100%" height="100%" viewBox="0 0 64 64" fill="var(--color-a)">
+      <path
+        d="M39.035,24.966l-0,-24.966l-14.069,0l-0,24.966l-24.966,-0l0,14.069l24.966,-0l-0,24.965l14.069,0l-0,-24.965l24.965,-0l0,-14.069l-24.965,-0Z"
+      />
+    </svg>
+  </button>
+  <% banner_data.forEach((banner) => { %>
+
+  <div class="hero-item" id="<%= banner.id %>">
+    <input type="hidden" id="hero-item-is-active" value="<%= banner.is_active %>" />
+    <a href="<%= banner.link || '#'; %>" aria-label="Inercia demoparty 2022">
+      <img src="<%= banner.image; %>" alt="" srcset="" />
+    </a>
+    <div class="edit-container">
+      <button class="delete-button" aria-label="Delete news">
+        <svg width="100%" height="100%" viewBox="0 0 64 64" fill="var(--color-a)">
+          <path
+            d="M39.035,24.966l-0,-24.966l-14.069,0l-0,24.966l-24.966,-0l0,14.069l24.966,-0l-0,24.965l14.069,0l-0,-24.965l24.965,-0l0,-14.069l-24.965,-0Z"
+          />
+        </svg>
+      </button>
+
+      <button class="update-button" aria-label="Edit news">
+        <svg width="100%" height="100%" viewBox="0 0 64 64" fill="var(--color-a)">
+          <path
+            d="M64,10.234l-10.234,-10.234l-46.552,46.553l10.233,10.233l46.553,-46.552Z"
+          />
+          <path d="M4.339,49.428l10.233,10.233l-14.572,4.339l4.339,-14.572Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <% }); %>
+</section>

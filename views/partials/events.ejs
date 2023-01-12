@@ -1,0 +1,27 @@
+<section id="events">
+  <h2>EVENTOS</h2>
+  <div class="tabs">
+    <div id="tab-a" class="tab-item">Demoparty</div>
+    <div id="tab-b" class="tab-item">Momentum</div>
+    <div id="tab-party" class="tab-content">
+      <ul>
+        <% events_data.demoparty.forEach((event) => { %>
+        <li class="event-item">
+          <a href="<%= event.link %>" aria-label="demoparty"><%= event.name %></a
+          ><span class="<%= event.status %>"><%= event.status %></span>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+    <div id="tab-momentum" class="tab-content">
+      <ul>
+        <% events_data.momentum.forEach((event) => { %>
+        <li class="event-item">
+          <a href="<%= event.link %>" aria-label="momentum"><%= event.name %></a
+          ><span class="<%= event.status %>"><%= event.status %></span>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</section>

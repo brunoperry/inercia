@@ -1,0 +1,11 @@
+<section id="hero">
+  <% banner_data.forEach((banner) => { %>
+
+  <div class="hero-item">
+    <a href="<%= banner.link || '#'; %>" aria-label="Inercia demoparty 2022">
+      <img src="<%= banner.image; %>" alt="" srcset="" />
+    </a>
+  </div>
+
+  <% }); %>
+</section>

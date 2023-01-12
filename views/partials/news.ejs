@@ -1,0 +1,12 @@
+<section id="news">
+  <h2>NOTÍCIAS</h2>
+  <ul>
+    <% news_data.forEach((news) => { %>
+    <li class="news-item">
+      <p><%= news.content %></p>
+      <span><%= news.date %></span>
+    </li>
+
+    <% }); %>
+  </ul>
+</section>
